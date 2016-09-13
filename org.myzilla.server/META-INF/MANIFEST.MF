@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Myzilla Server
+Bundle-SymbolicName: org.myzilla.server; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.emf.cdo.server,
+ org.eclipse.emf.cdo.server.net4j,
+ org.eclipse.emf.cdo.server.db,
+ org.eclipse.net4j.tcp,
+ org.eclipse.net4j.db.h2,
+ org.h2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

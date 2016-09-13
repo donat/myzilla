@@ -1,0 +1,11 @@
+<project name="Purge DB" default="main">
+
+	<target name="main">
+		<delete includeemptydirs="true">
+			<fileset dir="database">
+				<include name="**" />
+			</fileset>
+		</delete>
+	</target>
+
+</project>

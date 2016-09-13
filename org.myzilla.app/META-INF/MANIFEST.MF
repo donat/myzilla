@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Myzilla Application
+Bundle-SymbolicName: org.myzilla.app; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.myzilla.app.bundle.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.myzilla.storage,
+ org.myzilla.model.edit,
+ org.myzilla.model.editor,
+ org.eclipse.core.databinding,
+ org.eclipse.core.databinding.beans,
+ org.eclipse.core.databinding.observable,
+ org.eclipse.core.databinding.property,
+ org.eclipse.jface.databinding,
+ com.ibm.icu,
+ org.eclipse.emf.databinding,
+ org.eclipse.emf.cdo,
+ org.eclipse.emf.cdo.edit,
+ org.eclipse.emf.cdo.net4j,
+ org.eclipse.net4j.tcp
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.eclipse.wb.swt;x-internal:=true,
+ org.myzilla.app;x-internal:=true,
+ org.myzilla.app.bundle;x-internal:=true,
+ org.myzilla.app.rcp;x-internal:=true

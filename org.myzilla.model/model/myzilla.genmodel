@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.myzilla.model/src" creationIcons="false" modelPluginID="org.myzilla.model"
+    modelName="Myzilla" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
+    reflectiveDelegation="true" codeFormatting="true" testsDirectory="" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Reflective" complianceLevel="5.0" copyrightFields="false" optimizedHasChildren="true">
+  <foreignModel>myzilla.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
+  <genPackages prefix="Myzilla" basePackage="org" disposableProviderFactory="true"
+      ecorePackage="myzilla.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="myzilla.ecore#//Severity">
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/enhancement"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/trivial"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/minor"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/normal"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/major"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/critical"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Severity/blocker"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="myzilla.ecore#//Priority">
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Priority/P1"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Priority/P2"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Priority/P3"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Priority/P4"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Priority/P5"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="myzilla.ecore#//Status">
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/NEW"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/ASSIGNED"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/RESOLVED"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/CLOSED"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/REOPENED"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Status/VERIFIED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="myzilla.ecore#//Resolution">
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/FIXED"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/INVALID"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/WONTFIX"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/DUPLICATE"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/WORKSFORME"/>
+      <genEnumLiterals ecoreEnumLiteral="myzilla.ecore#//Resolution/NOT_ECLIPSE"/>
+    </genEnums>
+    <genClasses ecoreClass="myzilla.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//User/name"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Classification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Classification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference myzilla.ecore#//Classification/products"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Product/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference myzilla.ecore#//Product/components"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference myzilla.ecore#//Component/versions"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Version">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Version/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference myzilla.ecore#//Version/myzillas"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Myzilla">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/bugID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/severity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Myzilla/resolution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference myzilla.ecore#//Myzilla/reporter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference myzilla.ecore#//Myzilla/assignee"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference myzilla.ecore#//Myzilla/comments"/>
+    </genClasses>
+    <genClasses ecoreClass="myzilla.ecore#//Comment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference myzilla.ecore#//Comment/commenter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Comment/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute myzilla.ecore#//Comment/when"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

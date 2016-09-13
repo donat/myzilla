@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Myzilla Storage
+Bundle-SymbolicName: org.myzilla.storage; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.cdo;visibility:=reexport,
+ org.eclipse.emf.cdo.net4j,
+ org.eclipse.net4j.tcp,
+ org.eclipse.emf.ecore.change
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.myzilla.storage,
+ org.myzilla.storage.util
